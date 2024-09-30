@@ -1,0 +1,187 @@
+/* General Styling */
+/* General Styling for Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container Styling - Fixed Position */
+.container {
+    position: fixed; /* Fixed position to keep it in place */
+    top: 0; /* Align to the top of the page */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    text-align: center;
+    z-index: 1; /* Ensure it’s above other content */
+    padding: 20px;
+    border-bottom: 2px solid #f00; /* Optional: Border for visual separation */
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-bottom: 120px; /* Space for the sections below */
+}
+
+.main-content h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 24px;
+    color: #ccc;
+    margin: 10px 0 0;
+}
+
+/* Optional: Add padding to the body to prevent content being hidden under fixed container */
+body {
+    padding-top: 120px; /* Should match the height of .container */
+}
+
+
+/* Navigation Bar Styling */
+.nav-bar {
+    margin: 20px 0;
+}
+
+.nav-text {
+    font-size: 18px;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-text:hover {
+    background-color: #f00;
+    border-color: #f00;
+    color: #fff;
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sections */
+.section {
+    padding: 50px;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #232323;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Icon Container Styles */
+.icon-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 0;
+}
+
+.icon-container.left {
+    left: 50px;
+}
+
+.icon-container.right {
+    right: 50px;
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Greeting Styling */
+#greeting {
+    position: fixed;
+    top: 85%;  /* Slightly above the current time */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Center the element while considering its size */
+    font-size: 24px;
+    font-weight: 500;
+    color: #f0f0f0;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Current Time Styling */
+#current-time {
+    position: fixed;
+    top: 90%;      /* Center vertically */
+    left: 50%;     /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Adjust to account for the element's size */
+    font-size: 24px;
+    font-weight: 500;
+    color: #f0f0f0;
+    z-index: 2;
+}
+
+
+/* Luxurious Button Styling */
+.lux-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #3d3d3d; /* Dark gray background */
+    color: #fff; /* White text */
+    border: 2px solid #ffffff; /* Luxurious gold border */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Stylish font */
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); /* Soft gold shadow */
+    transition: all 0.3s ease;
+    z-index: 3; /* Ensure it's on top of other elements */
+}
+
+.lux-button:hover {
+    background-color: #f00; /* Gold on hover */
+    color: #ffffff; /* Dark gray text */
+    box-shadow: 0 8px 20px #f00; /* Increase shadow on hover */
+    transform: translateY(-3px); /* Lift on hover */
+}

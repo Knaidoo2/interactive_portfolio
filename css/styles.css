@@ -1,0 +1,213 @@
+/* styles.css */
+
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    color: #fff;
+    background-color: #1a1a1a; /* Dark background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Greeting Styling */
+#greeting {
+    position: fixed;
+    top: 85%;  /* Slightly above the current time */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Center the element while considering its size */
+    font-size: 24px;
+    font-weight: 500;
+    color: #f0f0f0;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Current Time Styling */
+#current-time {
+    position: fixed;
+    top: 90%;      /* Center vertically */
+    left: 50%;     /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Adjust to account for the element's size */
+    font-size: 24px;
+    font-weight: 500;
+    color: #f0f0f0;
+    z-index: 2;
+}
+
+
+
+/* Icon Container Styles */
+.icon-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 0; /* Ensure icons stay behind text */
+}
+
+.icon-container.left {
+    left: 50px;
+}
+
+.icon-container.right {
+    right: 50px;
+}
+
+.icon-container img {
+    width: 40px; /* Set icon size */
+    height: 40px; /* Set icon size */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Add drop shadow */
+}
+
+
+
+
+.container {
+    position: fixed; /* Fixed position to keep it in place */
+    top: 0; /* Align to the top of the page */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    text-align: center;
+    z-index: 1; /* Ensure it’s above other content */
+    padding: 20px;
+}
+
+
+/* Main Content Styling */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-content h1 {
+    font-size: 80px; /* Large text for the name */
+    font-weight: 700; /* Bold text */
+    color: #f0f0f0; /* Subtle light gray for the text */
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 24px;
+    color: #ccc; /* Lighter gray for the subtitle */
+    margin: 10px 0 0;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Start Terminal Button Styling */
+.start-terminal {
+    margin-top: 20px;
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#start-terminal-btn {
+    background-color: #1a1a1a; /* Ferrari red background */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#start-terminal-btn:hover {
+    background-color: #c00; /* Darker red on hover */
+}
+
+#interactive-terminal-container {
+    background-color: #1e1e1e; /* Slightly lighter background for contrast */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 250px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    border: 2px solid #f00;
+    position: fixed;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+.custom-terminal {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
+
+
+#terminal {
+    height: 100%;
+    width: 100%;
+     /* Green text for terminal feel */
+    text-align: left;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    padding: 10px;
+    margin: 0;
+    line-height: 1.6; /* Better readability */
+    font-size: 20px !important;
+
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style for the available commands */
+.command-text {
+     /* Consistent command text color */
+    font-weight: bold;
+}
+
+/* Return Button Styling */
+.return-to-terminal {
+    margin-top: 20px;
+}
+
+.btn-return {
+    background-color: #f00; /* Ferrari red background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block; /* Ensure button size adjusts to content */
+    
+}
+
+.btn-return:hover {
+    background-color: #c00; /* Darker red on hover */
+}
+
+

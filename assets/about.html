@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailan Naidoo - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/about-styles.css">
+    <!-- jQuery and jQuery Terminal -->
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.33.0/css/jquery.terminal.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.33.0/js/jquery.terminal.min.js"></script>
+</head>
+<body>
+
+    <a href="..\index.html" class="lux-button">Home</a>
+
+    <!-- Greeting and Time -->
+    <div id="greeting">Good Morning</div>
+    <p id="current-time"></p>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="main-content">
+            <h1>About Me</h1>
+            <p>Technical Consultant</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <a href="#introduction" class="nav-text">Introduction</a>
+            <a href="#current-work" class="nav-text">Current Work</a>
+            <a href="#hobbies" class="nav-text">Hobbies & Interests</a>
+        </nav>
+
+        <!-- Sections -->
+        <section id="introduction" class="section"><p>Hello, I'm Kailan. I am an aspiring DevOps Engineer. Welcome to my portfolio! This website is built using JavaScript, HTML, and CSS, containerized with Docker, and hosted on a Kubernetes platform.</p></section>
+        <section id="hobbies" class="section"><p>In my spare time, I enjoy playing football, listening to and creating music, and working on both front-end and back-end development projects. Check out my Spotify page for more of my creative work. YNWA.</p></section>
+        <section id="current-work" class="section"><p>I am currently a Technical Consultant at <a href="https://www.fusiongbs.com/about-us/" class="link">Fusion</a>. My key responsibilities include deploying and maintaining on-premise containerized platforms to optimize scalability and economic efficiency.</p></section>
+    </div>
+
+    <!-- Icon Containers -->
+    <div class="icon-container left">
+        <img src="../images/docker-mark-blue.png" alt="Docker">
+        <img src="../images/kubernetes.svg" alt="Kubernetes">
+        <img src="../images/database.png" alt="Database">
+        <img src="../images/icons8-javascript-64.png" alt="JavaScript">
+    </div>
+    
+    <div class="icon-container right">
+        <img src="../images/jenkins.svg" alt="Jenkins">
+        <img src="../images/aws-svgrepo-com.svg" alt="AWS">
+        <img src="../images/github-mark-white.png" alt="GitHub">
+        <img src="../images/html.png" alt="HTML">
+    </div>
+
+    <!-- Custom JS -->
+    <script src="../js/terminal.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/about.js"></script>
+</body>
+</html>
